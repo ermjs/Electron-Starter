@@ -1,0 +1,17 @@
+{
+  "name": "electron-starter",
+  "version": "1.0.0",
+  "description": "Electron starter",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "erman999",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^26.2.3"
+  },
+  "dependencies": {
+    "mysql2": "^3.6.1"
+  }
+}

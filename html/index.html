@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'">
+  <link href="./../css/bulma.min.css" rel="stylesheet">
+  <link href="./../css/styles.css" rel="stylesheet">
+  <title>Hello World!</title>
+</head>
+<body>
+
+  <div class="content p-4">
+
+    <div class="is-flex is-justify-content-space-between">
+      <h3 class="mt-1 mb-5">SQL Query Inserter</h3>
+      <button id="settings" class="button is-small" type="button">
+        <span class="icon">
+          <svg class="icon icon-cog"><use xlink:href="./../img/symbol-defs.svg#icon-cog"></use></svg>
+        </span>
+      </button>
+    </div>
+
+
+
+    <span class="tag is-black">Black</span>
+    <span class="tag is-dark">Dark</span>
+    <span class="tag is-light">Light</span>
+    <span class="tag is-white">White</span>
+    <span class="tag is-primary">Primary</span>
+    <span class="tag is-link">Link</span>
+    <span class="tag is-info">Info</span>
+    <span class="tag is-success">Success</span>
+    <span class="tag is-warning">Warning</span>
+    <span class="tag is-danger">Danger</span>
+
+
+    <br><br>
+
+    <div class="buttons">
+      <button class="button is-primary">Primary</button>
+      <button class="button is-link">Link</button>
+    </div>
+
+    <div class="buttons">
+      <button class="button is-info">Info</button>
+      <button class="button is-success">Success</button>
+      <button class="button is-warning">Warning</button>
+      <button class="button is-danger">Danger</button>
+    </div>
+
+
+
+
+
+
+    <div class="field">
+      <label class="label">Name</label>
+      <div class="control">
+        <input class="input" type="text" placeholder="Text input">
+      </div>
+    </div>
+
+    <div class="field">
+      <label class="label">Username</label>
+      <div class="control has-icons-left has-icons-right">
+        <input class="input is-success" type="text" placeholder="Text input" value="bulma">
+        <span class="icon is-small is-left">
+          <i class="fas fa-user"></i>
+        </span>
+        <span class="icon is-small is-right">
+          <i class="fas fa-check"></i>
+        </span>
+      </div>
+      <p class="help is-success">This username is available</p>
+    </div>
+
+    <div class="field">
+      <label class="label">Email</label>
+      <div class="control has-icons-left has-icons-right">
+        <input class="input is-danger" type="email" placeholder="Email input" value="hello@">
+        <span class="icon is-small is-left">
+          <i class="fas fa-envelope"></i>
+        </span>
+        <span class="icon is-small is-right">
+          <i class="fas fa-exclamation-triangle"></i>
+        </span>
+      </div>
+      <p class="help is-danger">This email is invalid</p>
+    </div>
+
+    <div class="field">
+      <label class="label">Subject</label>
+      <div class="control">
+        <div class="select">
+          <select>
+            <option>Select dropdown</option>
+            <option>With options</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="field">
+      <label class="label">Message</label>
+      <div class="control">
+        <textarea class="textarea" placeholder="Textarea"></textarea>
+      </div>
+    </div>
+
+    <div class="field">
+      <div class="control">
+        <label class="checkbox">
+          <input type="checkbox">
+          I agree to the <a href="#">terms and conditions</a>
+        </label>
+      </div>
+    </div>
+
+    <div class="field">
+      <div class="control">
+        <label class="radio">
+          <input type="radio" name="question">
+          Yes
+        </label>
+        <label class="radio">
+          <input type="radio" name="question">
+          No
+        </label>
+      </div>
+    </div>
+
+    <div class="field is-grouped">
+      <div class="control">
+        <button class="button is-link">Submit</button>
+      </div>
+      <div class="control">
+        <button class="button is-link is-light">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="./../js/renderer.js"></script>
+</body>
+</html>
