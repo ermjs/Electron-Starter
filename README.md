@@ -22,6 +22,8 @@ Here are some screenshots of the Data Synchronizer:
 To get started with this application, simply clone the repository and run the following commands:
 
 ```bash
+git clone https://github.com/erman999/Electron-Starter.git
+cd Electron-Starter
 npm install
 npm start
 ```
