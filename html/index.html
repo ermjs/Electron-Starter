@@ -3,140 +3,66 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'">
+  <link href="./../css/material-symbols.css" rel="stylesheet">
   <link href="./../css/bulma.min.css" rel="stylesheet">
   <link href="./../css/styles.css" rel="stylesheet">
-  <title>Hello World!</title>
+  <title>Electron Starter</title>
 </head>
 <body>
 
-  <div class="content p-4">
+  <section class="section px-5 py-5">
+    <p class="title is-4">Electron Starter</p>
+    <p class="subtitle is-6">Improved Security, IPC Setup, Material Icons and Bulma CSS </p>
+  </section>
 
-    <div class="is-flex is-justify-content-space-between">
-      <h3 class="mt-1 mb-5">SQL Query Inserter</h3>
-      <button id="settings" class="button is-small" type="button">
-        <span class="icon">
-          <svg class="icon icon-cog"><use xlink:href="./../img/symbol-defs.svg#icon-cog"></use></svg>
-        </span>
-      </button>
-    </div>
+  <div class="px-5 py-2">
 
+    <table class="table is-fullwidth">
+      <thead>
+        <tr>
+          <th>Channel Type</th>
+          <th>Sent Data</th>
+          <th>Send</th>
+          <th>Received Data</th>
+        </tr>
+      </thead>
+      <tbody>
 
+        <!-- Renderer to Main -->
+        <tr>
+          <td><span class="tag is-medium is-warning has-text-left">Render <span class="material-symbols-rounded">navigate_next</span> Main</span></td>
+          <td><input id="row1-send" class="input is-primary" type="text" value="foo"></td>
+          <td><button id="row1-button" class="button is-link p-2"><span class="material-symbols-rounded">arrow_forward</span></button></td>
+          <td><input class="input" type="text" placeholder="Disabled" disabled></td>
+        </tr>
 
-    <span class="tag is-black">Black</span>
-    <span class="tag is-dark">Dark</span>
-    <span class="tag is-light">Light</span>
-    <span class="tag is-white">White</span>
-    <span class="tag is-primary">Primary</span>
-    <span class="tag is-link">Link</span>
-    <span class="tag is-info">Info</span>
-    <span class="tag is-success">Success</span>
-    <span class="tag is-warning">Warning</span>
-    <span class="tag is-danger">Danger</span>
+        <!-- Main to Renderer -->
+        <tr>
+          <td><span class="tag is-medium is-warning has-text-left">Main <span class="material-symbols-rounded">navigate_next</span> Render</span></td>
+          <td><input class="input" type="text" placeholder="Disabled" disabled></td>
+          <td><button class="button is-warning is-loading p-2" disabled><span class="material-symbols-rounded">arrow_forward</span></button></td>
+          <td><input id="row2-receive" class="input is-primary" type="text" readonly></td>
+        </tr>
 
+        <!-- Render to Main (Value) to Render -->
+        <tr>
+          <td><span class="tag is-medium is-warning has-text-left">Render <span class="material-symbols-rounded">navigate_next</span> Main (Value) <span class="material-symbols-rounded">navigate_next</span> Render</span></td>
+          <td><input id="row3-send" class="input is-primary" type="text" value="Reverse this text"></td>
+          <td><button id="row3-button" class="button is-link p-2"><span class="material-symbols-rounded">arrow_forward</span></button></td>
+          <td><input id="row3-receive" class="input is-primary" type="text"></td>
+        </tr>
 
-    <br><br>
+        <!-- Render to Main (Promise) to Render -->
+        <tr>
+          <td><span class="tag is-medium is-warning has-text-left">Render <span class="material-symbols-rounded">navigate_next</span> Main (Promise) <span class="material-symbols-rounded">navigate_next</span> Render</span></td>
+          <td><input id="row4-send" class="input is-primary" type="text" value="bar"></td>
+          <td><button id="row4-button" class="button is-link p-2"><span class="material-symbols-rounded">arrow_forward</span></button></td>
+          <td><input id="row4-receive" class="input is-primary" type="text"></td>
+        </tr>
 
-    <div class="buttons">
-      <button class="button is-primary">Primary</button>
-      <button class="button is-link">Link</button>
-    </div>
+      </tbody>
+    </table>
 
-    <div class="buttons">
-      <button class="button is-info">Info</button>
-      <button class="button is-success">Success</button>
-      <button class="button is-warning">Warning</button>
-      <button class="button is-danger">Danger</button>
-    </div>
-
-
-
-
-
-
-    <div class="field">
-      <label class="label">Name</label>
-      <div class="control">
-        <input class="input" type="text" placeholder="Text input">
-      </div>
-    </div>
-
-    <div class="field">
-      <label class="label">Username</label>
-      <div class="control has-icons-left has-icons-right">
-        <input class="input is-success" type="text" placeholder="Text input" value="bulma">
-        <span class="icon is-small is-left">
-          <i class="fas fa-user"></i>
-        </span>
-        <span class="icon is-small is-right">
-          <i class="fas fa-check"></i>
-        </span>
-      </div>
-      <p class="help is-success">This username is available</p>
-    </div>
-
-    <div class="field">
-      <label class="label">Email</label>
-      <div class="control has-icons-left has-icons-right">
-        <input class="input is-danger" type="email" placeholder="Email input" value="hello@">
-        <span class="icon is-small is-left">
-          <i class="fas fa-envelope"></i>
-        </span>
-        <span class="icon is-small is-right">
-          <i class="fas fa-exclamation-triangle"></i>
-        </span>
-      </div>
-      <p class="help is-danger">This email is invalid</p>
-    </div>
-
-    <div class="field">
-      <label class="label">Subject</label>
-      <div class="control">
-        <div class="select">
-          <select>
-            <option>Select dropdown</option>
-            <option>With options</option>
-          </select>
-        </div>
-      </div>
-    </div>
-
-    <div class="field">
-      <label class="label">Message</label>
-      <div class="control">
-        <textarea class="textarea" placeholder="Textarea"></textarea>
-      </div>
-    </div>
-
-    <div class="field">
-      <div class="control">
-        <label class="checkbox">
-          <input type="checkbox">
-          I agree to the <a href="#">terms and conditions</a>
-        </label>
-      </div>
-    </div>
-
-    <div class="field">
-      <div class="control">
-        <label class="radio">
-          <input type="radio" name="question">
-          Yes
-        </label>
-        <label class="radio">
-          <input type="radio" name="question">
-          No
-        </label>
-      </div>
-    </div>
-
-    <div class="field is-grouped">
-      <div class="control">
-        <button class="button is-link">Submit</button>
-      </div>
-      <div class="control">
-        <button class="button is-link is-light">Cancel</button>
-      </div>
-    </div>
   </div>
 
   <script src="./../js/renderer.js"></script>

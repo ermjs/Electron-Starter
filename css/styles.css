@@ -1,3 +1,23 @@
-html {
+/* Hide scrollbar */
+html, body {
   font-size: 14px;
+  overflow: hidden !important;
+}
+
+/* Hide scrollbar */
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+/* Fix Bulma tags when font-size: 14px */
+.tag {
+  line-height: 1 !important;
+}
+
+.table td, .table th {
+  vertical-align: middle !important;
+}
+
+.table th {
+  text-align: center !important;
 }

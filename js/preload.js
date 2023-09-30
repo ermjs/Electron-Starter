@@ -6,11 +6,18 @@ const ipcRenderer = require('electron').ipcRenderer;
 const ipc = {
   // From render to main
   'render': {
-    'send': [],
+    'send': [
+      'channel-1'
+    ],
     // From main to render
-    'receive': [],
+    'receive': [
+      'channel-2'
+    ],
     // From render to main and back again
-    'sendReceive': []
+    'sendReceive': [
+      'channel-3',
+      'channel-4'
+    ]
   }
 };
 
