@@ -14,9 +14,8 @@ Here are some screenshots of the Data Synchronizer:
 <br/>
 <p align="center"><img src="https://raw.githubusercontent.com/erman999/Electron-Starter/master/screenshots/renderer.jpg" width="600"></p>
 
-<br/>
 <p align="center"><img src="https://raw.githubusercontent.com/erman999/Electron-Starter/master/screenshots/main.jpg" width="600"></p>
-
+<br/>
 
 ## Getting Started
 
