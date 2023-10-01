@@ -1,6 +1,5 @@
 # Electron Starter
 
-<br/>
 <h3 align="center">
 <img alt="Badge" src="https://img.shields.io/badge/JavaScript-F7DF1E.svg?style=for-the-badge&logo=JavaScript&logoColor=black"/>
 <img alt="Badge" src="https://img.shields.io/badge/Node.js-339933.svg?style=for-the-badge&logo=nodedotjs&logoColor=white"/>
