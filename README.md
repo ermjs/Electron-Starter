@@ -1,5 +1,6 @@
 # Electron Starter
 
+<br/>
 <h3 align="center">
 <img alt="Badge" src="https://img.shields.io/badge/JavaScript-F7DF1E.svg?style=for-the-badge&logo=JavaScript&logoColor=black"/>
 <img alt="Badge" src="https://img.shields.io/badge/Node.js-339933.svg?style=for-the-badge&logo=nodedotjs&logoColor=white"/>
@@ -7,7 +8,6 @@
 <img alt="Badge" src="https://img.shields.io/badge/Bulma-00D1B2.svg?style=for-the-badge&logo=Bulma&logoColor=white"/>
 <img alt="Badge" src="https://img.shields.io/badge/Material%20Design%20Icons-2196F3.svg?style=for-the-badge&logo=Material-Design-Icons&logoColor=white"/>
 </h3>
-
 <br/>
 
 This is a starter Electron application that is great for beginners who want to get started with Electron development. It includes the following features:
