@@ -1,12 +1,14 @@
 # Electron Starter
 
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
+<h3 align="center">
+<img alt="Badge" src="https://img.shields.io/badge/JavaScript-F7DF1E.svg?style=for-the-badge&logo=JavaScript&logoColor=black"/>
+<img alt="Badge" src="https://img.shields.io/badge/Node.js-339933.svg?style=for-the-badge&logo=nodedotjs&logoColor=white"/>
+<img alt="Badge" src="https://img.shields.io/badge/Electron-47848F.svg?style=for-the-badge&logo=Electron&logoColor=white"/>
+<img alt="Badge" src="https://img.shields.io/badge/Bulma-00D1B2.svg?style=for-the-badge&logo=Bulma&logoColor=white"/>
+<img alt="Badge" src="https://img.shields.io/badge/Material%20Design%20Icons-2196F3.svg?style=for-the-badge&logo=Material-Design-Icons&logoColor=white"/>
+</h3>
 
+<br/>
 
 This is a starter Electron application that is great for beginners who want to get started with Electron development. It includes the following features:
 
@@ -54,47 +56,47 @@ Check `channels` in `main.js`, `preload.js` and `renderer.js` these communicatio
 There are 4 different ways to communicate `renderer.js` with `main.js`.
 
 1. Renderer to Main
-  ```js
-  // renderer.js
-  window.ipcRender.send('channel-1', data); // Data is optional.
+```js
+// renderer.js
+window.ipcRender.send('channel-1', data); // Data is optional.
 
-  // main.js
-  ipcMain.on('channel-1', (event, data) => { console.log(data); });
-  ```
+// main.js
+ipcMain.on('channel-1', (event, data) => { console.log(data); });
+```
 
 2. Main to Renderer
-  ```js
-  // main.js
-  mainWindow.webContents.send('channel-2', data); // Data is optional.
+```js
+// main.js
+mainWindow.webContents.send('channel-2', data); // Data is optional.
 
-  // renderer.js
-  window.ipcRender.receive('channel-2', (data) => { console.log(data); });
-  ```
+// renderer.js
+window.ipcRender.receive('channel-2', (data) => { console.log(data); });
+```
 
 3. Renderer to Main (Value) return to Renderer
-  ```js
-  // renderer.js
-  window.ipcRender.invoke('channel-3', data).then((result) => { console.log(result); });
+```js
+// renderer.js
+window.ipcRender.invoke('channel-3', data).then((result) => { console.log(result); });
 
-  // main.js
-  ipcMain.handle('channel-3', (event, data) => { return data; });
-  ```
+// main.js
+ipcMain.handle('channel-3', (event, data) => { return data; });
+```
 
 4. Renderer to Main (Promise) return to Renderer
-  ```js
-  // renderer.js
-  window.ipcRender.invoke('channel-4', data).then((result) => { console.log(result); });
+```js
+// renderer.js
+window.ipcRender.invoke('channel-4', data).then((result) => { console.log(result); });
 
-  // main.js    
-  ipcMain.handle('channel-4', async (event, data) => {
-    const myPromise = new Promise((resolve, reject) => {
-      setTimeout(() => {
-        resolve({test: 'foo'});
-      }, 300);
-    });
-    return await myPromise.then((result) => { return result; });
+// main.js    
+ipcMain.handle('channel-4', async (event, data) => {
+  const myPromise = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve({test: 'foo'});
+    }, 300);
   });
-  ```
+  return await myPromise.then((result) => { return result; });
+});
+```
 
 As a final step you will need to configure `preload.js` file. It is a great way to use `White-listed channels` for ease of use of IPC.
 
