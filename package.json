@@ -10,8 +10,5 @@
   "license": "MIT",
   "devDependencies": {
     "electron": "^26.2.3"
-  },
-  "dependencies": {
-    "mysql2": "^3.6.1"
   }
 }
