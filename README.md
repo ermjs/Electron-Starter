@@ -308,6 +308,20 @@ app.setLoginItemSettings({
 });
 ```
 
+`Windows` -> If users don't want app to start on system startup, they can disable it from `Task Manager -> Startup Apps`.
+However, this operation won't delete created registy from the system.
+So, if you don't event want to see it on the `Startup Apps` list, check below registry addresses and delete related registy.
+
+Press `Win + R` and type `regedit` and click `OK` button.
+
+```
+HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Run
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Run
+HKEY_CURRENT_USER\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Run
+HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Run
+
+```
+
 ## Contributing
 
 If you find any issues with this application or would like to contribute, please feel free to submit a pull request or open an issue.
