@@ -298,6 +298,20 @@ if (require('electron-squirrel-startup')) app.quit();
 After you finish configuration. Run `npm run make` to create your packages.
 You will see created packages in `out` folder.
 
+### Uninstalling Application
+
+Neither Electron nor Squirrel have uninstaller. 
+Best option is to use Windows native uninstaller.
+It's usually called as `Program and Features` and for newer Windows versions it's under `Settings -> Apps -> Installed Apps`.
+After you uninstall your application some files will still remain in `AppData` folder.
+You can find exact addresses for remaining files below.
+
+```
+C:\Users\<YOUR_USER>\AppData\Local\electron_starter
+C:\Users\<YOUR_USER>\AppData\Roaming\electron-starter
+```
+
+
 ### Optional: Auto Start App
 
 In order to start app on system startup, add below code after `app` declaration.
