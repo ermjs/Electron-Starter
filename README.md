@@ -18,7 +18,7 @@ This is a starter Electron application that is great for beginners who want to g
 
 
 ## Screenshots
-Here are some screenshots of the Data Synchronizer:
+Here are some screenshots of the Electron Starter:
 
 <br/>
 <p align="center"><img src="https://raw.githubusercontent.com/erman999/Electron-Starter/master/screenshots/renderer.jpg" width="600"></p>
@@ -175,6 +175,11 @@ I strongly recommend to use `Electron Forge` for packaging.
 Install Electron Forge.
 ```bash
 npm install --save-dev @electron-forge/cli
+```
+
+Importing an Existing Project.
+```bash
+npm exec --package=@electron-forge/cli -c "electron-forge import"
 ```
 
 After installation `Electron Forge` will update `package.json` file.
