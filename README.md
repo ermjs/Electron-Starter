@@ -289,7 +289,7 @@ Top of `main.js` file should look like this.
 const { app, BrowserWindow, ipcMain } = require('electron');
 const path = require('node:path');
 
-// HERE
+// *** Here ***
 if (require('electron-squirrel-startup')) app.quit();
 ```
 
@@ -297,6 +297,16 @@ if (require('electron-squirrel-startup')) app.quit();
 
 After you finish configuration. Run `npm run make` to create your packages.
 You will see created packages in `out` folder.
+
+### Optional: Auto Start App
+
+In order to start app on system startup, add below code after `app` declaration.
+
+```js
+app.setLoginItemSettings({
+  openAtLogin: true
+});
+```
 
 ## Contributing
 
