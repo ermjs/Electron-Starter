@@ -282,6 +282,17 @@ Also add below line to very top of `main.js` file. I usually add after declaring
 if (require('electron-squirrel-startup')) app.quit();
 ```
 
+Top of `main.js` file should look like this.
+
+```js
+// main.js
+const { app, BrowserWindow, ipcMain } = require('electron');
+const path = require('node:path');
+
+// HERE
+if (require('electron-squirrel-startup')) app.quit();
+```
+
 *If you don't add this line to your `main.js` file. Your app will start during installation and you will probably see some errors. This piece of code prevents users to see some kind of weird errors.*
 
 After you finish configuration. Run `npm run make` to create your packages.
