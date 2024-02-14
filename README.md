@@ -312,6 +312,70 @@ C:\Users\<YOUR_USER>\AppData\Roaming\electron-starter
 ```
 
 
+### Optional:  Prevent App to Close When Close Button Clicked and Restore App From Tray
+
+You need to define `Menu` and `Tray` objects like below.
+
+```js
+// main.js
+const { app, BrowserWindow, ipcMain, Menu, Tray } = require('electron');
+```
+
+Prevent window from closing when close button clicked.
+Add below `close` event listener to `createWindow` function after you declare `mainWindow` object.
+
+```js
+// main.js
+
+function createWindow () {
+  mainWindow = new BrowserWindow({...});
+  // ...
+
+  // Here
+  mainWindow.on('close', function (event) {
+    event.preventDefault();
+    mainWindow.hide();
+  });
+
+}
+```
+
+Declare a global tray variable.
+
+```js
+// main.js
+let tray = null;
+```
+
+Then add below code in `app.whenReady` function.
+
+```js
+// main.js
+
+app.whenReady().then(() => {
+  
+  // Create Tray object
+  tray = new Tray(path.join(__dirname, 'node.ico'));
+  // Prepare context menu
+  const contextMenu = Menu.buildFromTemplate([
+    { label: 'Show App', click:  function() {
+      mainWindow.show();
+    } },
+    { label: 'Quit', click:  function() {
+      mainWindow.destroy();
+      app.quit();
+    } }
+  ]);
+  // Change here as you wish
+  tray.setToolTip('This is Electron Starter');
+  // Set tray context menu
+  tray.setContextMenu(contextMenu);
+  
+  // Other codes...
+});
+```
+
+
 ### Optional: Auto Start App
 
 In order to start app on system startup, add below code after `app` declaration.
