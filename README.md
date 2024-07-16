@@ -400,6 +400,10 @@ HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Run
 
 ```
 
+### Optional: Windows Refresh Icon Cache
+ie4uinit.exe -show
+
+
 ## Contributing
 
 If you find any issues with this application or would like to contribute, please feel free to submit a pull request or open an issue.
